@@ -4,7 +4,7 @@
  * Learn:
  * - What is a Promise (pending, fulfilled, rejected)
  * - .then() and .catch() for handling results
- * - async/await syntax
+ * - async/await syntax catch
  * - Promise.all() for parallel execution
  * - Promise.race() for first-to-finish
  */

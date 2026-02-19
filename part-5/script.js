@@ -4,7 +4,7 @@
  * Learn:
  * - try { } catch (error) { } - Catch and handle errors
  * - throw new Error() - Create your own errors
- * - finally { } - Code that always runs
+ * - finally { } - Code that always run
  * - Custom error classes
  * - Async error handling
  */
