@@ -1,0 +1,147 @@
+/* Part 4: localStorage - Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+h2 {
+    color: #11998e;
+    border-bottom: 3px solid #11998e;
+    padding-bottom: 10px;
+}
+
+.section {
+    background: white;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+button {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(17, 153, 142, 0.4);
+}
+
+button.danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 5px;
+    width: 150px;
+}
+
+input:focus {
+    border-color: #11998e;
+    outline: none;
+}
+
+.output {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #11998e;
+    font-family: 'Consolas', monospace;
+    white-space: pre-wrap;
+}
+
+.storage-item {
+    background: #e8f5e9;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.storage-item button {
+    padding: 5px 15px;
+    font-size: 12px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.stat-box {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stat-box .number {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.stat-box .label {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.compare-box {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.compare-box.local {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    color: white;
+}
+
+.compare-box.session {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.compare-box .label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}

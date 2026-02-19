@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 7: Working with APIs (CRUD)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Part 7: Working with APIs (CRUD Operations)</h1>
+
+    <!-- Topic 1: Display Data -->
+    <div class="section">
+        <h2>Topic 1: Display API Data</h2>
+        <p><strong>Learn:</strong> Fetch and display data in cards</p>
+
+        <button id="load-users-btn">Load Users</button>
+        <button id="clear-btn">Clear</button>
+        <div class="loading" id="users-loading" style="display: none;">Loading...</div>
+        <div class="cards-grid" id="users-grid"></div>
+    </div>
+
+    <!-- Topic 2: POST - Create -->
+    <div class="section">
+        <h2>Topic 2: POST - Create New Data</h2>
+        <p><strong>Learn:</strong> Send data to server with POST method</p>
+
+        <input type="text" id="post-title" placeholder="Post title">
+        <input type="text" id="post-body" placeholder="Post content">
+        <button id="create-btn">Create Post (POST)</button>
+        <div class="output" id="post-output">Enter data and create...</div>
+    </div>
+
+    <!-- Topic 3: PUT vs PATCH -->
+    <div class="section">
+        <h2>Topic 3: PUT vs PATCH - Update Data</h2>
+        <p><strong>Learn:</strong> PUT replaces all, PATCH updates some fields</p>
+
+        <input type="text" id="update-title" placeholder="New title">
+        <button id="put-btn">PUT (Replace All)</button>
+        <button id="patch-btn">PATCH (Update Title Only)</button>
+        <div class="output" id="update-output">Update post ID 1...</div>
+    </div>
+
+    <!-- Topic 4: DELETE -->
+    <div class="section">
+        <h2>Topic 4: DELETE - Remove Data</h2>
+        <p><strong>Learn:</strong> Delete resources from server</p>
+
+        <input type="number" id="delete-id" placeholder="Post ID" value="1">
+        <button id="delete-btn">Delete Post</button>
+        <div class="output" id="delete-output">Enter ID and delete...</div>
+    </div>
+
+    <!-- Topic 5: Search with Debounce -->
+    <div class="section">
+        <h2>Topic 5: Search with Debouncing</h2>
+        <p><strong>Learn:</strong> Wait for user to stop typing before searching</p>
+
+        <input type="text" id="search-input" placeholder="Search users..." style="width: 100%;">
+        <div class="output" id="search-output">Type to search (waits 300ms)...</div>
+        <div class="cards-grid" id="search-results"></div>
+    </div>
+
+    <!-- Topic 6: Pagination -->
+    <div class="section">
+        <h2>Topic 6: Pagination - Load More</h2>
+        <p><strong>Learn:</strong> Load data in chunks with pagination</p>
+
+        <button id="load-posts-btn">Load Posts</button>
+        <button id="load-more-btn" style="display: none;">Load More</button>
+        <div id="posts-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

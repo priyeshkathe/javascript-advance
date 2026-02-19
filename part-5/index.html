@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 5: Error Handling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Part 5: Error Handling (try-catch)</h1>
+
+    <!-- Topic 1: Basic try-catch -->
+    <div class="section">
+        <h2>Topic 1: Basic try-catch</h2>
+        <p><strong>Learn:</strong> Catch errors and handle them gracefully</p>
+
+        <h3>Parse JSON</h3>
+        <input type="text" id="json-input" placeholder='{"name": "John"}' style="width: 300px;">
+        <button id="parse-btn">Parse JSON</button>
+        <div class="output" id="parse-output">Enter JSON and click parse...</div>
+    </div>
+
+    <!-- Topic 2: throw new Error -->
+    <div class="section">
+        <h2>Topic 2: Throwing Custom Errors</h2>
+        <p><strong>Learn:</strong> Create your own errors with throw</p>
+
+        <h3>Divide Numbers</h3>
+        <input type="number" id="num-a" placeholder="Number A" style="width: 100px;">
+        <span> ÷ </span>
+        <input type="number" id="num-b" placeholder="Number B" style="width: 100px;">
+        <button id="divide-btn">Divide</button>
+        <div class="output" id="divide-output">Enter numbers and divide...</div>
+
+        <h3>Age Verification</h3>
+        <input type="number" id="age-input" placeholder="Enter age">
+        <button id="verify-btn">Verify Age (18+)</button>
+        <div class="output" id="age-output">Enter age to verify...</div>
+    </div>
+
+    <!-- Topic 3: try-catch-finally -->
+    <div class="section">
+        <h2>Topic 3: The finally Block</h2>
+        <p><strong>Learn:</strong> finally ALWAYS runs, success or failure</p>
+
+        <button id="finally-success-btn">Run Success</button>
+        <button id="finally-fail-btn">Run Failure</button>
+        <div class="output" id="finally-output">Click a button...</div>
+        <div class="output" id="finally-log">Log will appear here...</div>
+    </div>
+
+    <!-- Topic 4: Custom Error Classes -->
+    <div class="section">
+        <h2>Topic 4: Custom Error Classes</h2>
+        <p><strong>Learn:</strong> Create specific error types</p>
+
+        <select id="error-type">
+            <option value="validation">ValidationError</option>
+            <option value="auth">AuthError</option>
+            <option value="network">NetworkError</option>
+        </select>
+        <button id="throw-btn">Throw Error</button>
+        <div class="output" id="custom-output">Select error type and throw...</div>
+    </div>
+
+    <!-- Topic 5: Async Error Handling -->
+    <div class="section">
+        <h2>Topic 5: Async Error Handling</h2>
+        <p><strong>Learn:</strong> Handle errors in async/await code</p>
+
+        <button id="fetch-good-btn">Fetch Valid URL</button>
+        <button id="fetch-bad-btn">Fetch Invalid URL</button>
+        <div class="output" id="async-output">Test async error handling...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

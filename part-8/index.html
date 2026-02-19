@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance 5: Final Project - Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-toggle" id="dark-mode-btn">🌙 Dark Mode</button>
+
+    <h1>Advance 5: Final Project - Notes App</h1>
+
+    <div class="app-container">
+        <!-- Header with Search -->
+        <div class="app-header">
+            <h2>My Notes</h2>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search notes...">
+                <select id="filter-category">
+                    <option value="all">All Categories</option>
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="ideas">Ideas</option>
+                    <option value="todo">To-Do</option>
+                </select>
+                <select id="sort-by">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="title">By Title</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="app-content">
+            <!-- Note Form -->
+            <div class="note-form">
+                <h3 id="form-title">Create New Note</h3>
+
+                <div class="form-group">
+                    <label for="note-title">Title *</label>
+                    <input type="text" id="note-title" placeholder="Enter note title..." maxlength="50">
+                    <div class="char-counter"><span id="title-count">0</span>/50</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="note-content">Content *</label>
+                    <textarea id="note-content" placeholder="Write your note here..." maxlength="500"></textarea>
+                    <div class="char-counter"><span id="content-count">0</span>/500</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="note-category">Category</label>
+                    <select id="note-category">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="ideas">Ideas</option>
+                        <option value="todo">To-Do</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Color</label>
+                    <div class="color-options">
+                        <div class="color-option selected" data-color="#fff9c4" style="background: #fff9c4;"></div>
+                        <div class="color-option" data-color="#f8bbd9" style="background: #f8bbd9;"></div>
+                        <div class="color-option" data-color="#b3e5fc" style="background: #b3e5fc;"></div>
+                        <div class="color-option" data-color="#c8e6c9" style="background: #c8e6c9;"></div>
+                        <div class="color-option" data-color="#ffe0b2" style="background: #ffe0b2;"></div>
+                        <div class="color-option" data-color="#e1bee7" style="background: #e1bee7;"></div>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button class="btn-primary" id="save-btn">Save Note</button>
+                    <button class="btn-secondary" id="clear-btn">Clear</button>
+                    <button class="btn-danger" id="delete-btn" style="display: none;">Delete</button>
+                </div>
+            </div>
+
+            <!-- Notes List -->
+            <div class="notes-list">
+                <h3>
+                    Your Notes
+                    <span class="note-count" id="note-count">0 notes</span>
+                </h3>
+                <div class="notes-container" id="notes-container">
+                    <!-- Notes will be rendered here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Extra Features Section -->
+        <div class="extra-features">
+            <h3>Extra Features (Exercises 6-8)</h3>
+            <div class="feature-buttons">
+                <button class="btn-primary" id="export-btn">📤 Export Notes (JSON)</button>
+                <button class="btn-primary" id="import-btn">📥 Import Notes</button>
+                <input type="file" id="import-file" accept=".json" style="display: none;">
+                <button class="btn-secondary" id="pin-btn">📌 Pin Selected Note</button>
+                <button class="btn-danger" id="clear-all-btn">🗑️ Clear All Notes</button>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-value" id="total-notes">0</div>
+                <div class="stat-label">Total Notes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="this-week">0</div>
+                <div class="stat-label">This Week</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="categories-used">0</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="pinned-count">0</div>
+                <div class="stat-label">Pinned</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

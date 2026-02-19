@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 4: localStorage - Saving Data in Browser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Part 4: localStorage - Saving Data in Browser</h1>
+
+    <!-- Topic 1: Basic Operations -->
+    <div class="section">
+        <h2>Topic 1: Basic localStorage Operations</h2>
+        <p><strong>Learn:</strong> setItem, getItem, removeItem, clear</p>
+
+        <input type="text" id="key-input" placeholder="Key name">
+        <input type="text" id="value-input" placeholder="Value">
+        <button id="save-btn">Save</button>
+        <button id="get-btn">Get</button>
+        <div class="output" id="basic-output">Enter key and value...</div>
+
+        <h3>All Stored Items</h3>
+        <button id="view-all-btn">View All</button>
+        <button id="clear-all-btn" class="danger">Clear All</button>
+        <div id="storage-items"></div>
+    </div>
+
+    <!-- Topic 2: Storing Objects with JSON -->
+    <div class="section">
+        <h2>Topic 2: Storing Objects (JSON)</h2>
+        <p><strong>Learn:</strong> localStorage only stores strings! Use JSON.stringify/parse</p>
+
+        <h3>Save User Profile</h3>
+        <input type="text" id="profile-name" placeholder="Name">
+        <input type="text" id="profile-email" placeholder="Email">
+        <input type="number" id="profile-age" placeholder="Age">
+        <button id="save-profile-btn">Save Profile</button>
+        <button id="load-profile-btn">Load Profile</button>
+        <div class="output" id="profile-output">Enter profile data...</div>
+    </div>
+
+    <!-- Topic 3: Practical Example - Visit Counter -->
+    <div class="section">
+        <h2>Topic 3: Persistent Visit Counter</h2>
+        <p><strong>Learn:</strong> Data persists even after page refresh!</p>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="number" id="visit-count">0</div>
+                <div class="label">Page Visits</div>
+            </div>
+            <div class="stat-box">
+                <div class="number" id="click-count">0</div>
+                <div class="label">Button Clicks</div>
+            </div>
+        </div>
+
+        <button id="click-btn">Click Me!</button>
+        <button id="reset-stats-btn" class="danger">Reset Stats</button>
+        <p><small>Refresh the page to see visit count increase!</small></p>
+    </div>
+
+    <!-- Topic 4: localStorage vs sessionStorage -->
+    <div class="section">
+        <h2>Topic 4: localStorage vs sessionStorage</h2>
+        <p><strong>Learn:</strong> sessionStorage clears when tab closes, localStorage doesn't</p>
+
+        <input type="text" id="dual-input" placeholder="Enter a value...">
+        <button id="save-both-btn">Save to Both</button>
+        <button id="check-both-btn">Check Both</button>
+
+        <div class="compare-grid">
+            <div class="compare-box local">
+                <div class="label">localStorage</div>
+                <div id="local-value">Empty</div>
+                <small>Stays forever</small>
+            </div>
+            <div class="compare-box session">
+                <div class="label">sessionStorage</div>
+                <div id="session-value">Empty</div>
+                <small>Clears on tab close</small>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

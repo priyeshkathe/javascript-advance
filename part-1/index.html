@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 1: Timers - setTimeout & setInterval</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Part 1: Timers (setTimeout & setInterval)</h1>
+
+    <!-- Topic 1: setTimeout -->
+    <div class="section">
+        <h2>Topic 1: setTimeout - Run Once After Delay</h2>
+        <p><strong>Learn:</strong> setTimeout runs code ONCE after a delay</p>
+
+        <button id="delayed-btn">Show Message After 2 Seconds</button>
+        <div class="output" id="delayed-output">Click button to see delayed message...</div>
+
+        <h3>Try Different Delays</h3>
+        <input type="number" id="delay-input" placeholder="Milliseconds" value="1000">
+        <button id="custom-delay-btn">Run After Custom Delay</button>
+        <div class="output" id="custom-output">Enter delay and click button...</div>
+    </div>
+
+    <!-- Topic 2: setInterval -->
+    <div class="section">
+        <h2>Topic 2: setInterval - Run Repeatedly</h2>
+        <p><strong>Learn:</strong> setInterval runs code REPEATEDLY at fixed intervals</p>
+
+        <h3>Live Clock</h3>
+        <div class="timer" id="clock-display">00:00:00</div>
+
+        <h3>Countdown Timer</h3>
+        <div class="timer" id="countdown-display">10</div>
+        <button id="start-countdown">Start Countdown</button>
+        <button id="stop-countdown">Stop</button>
+        <button id="reset-countdown">Reset</button>
+    </div>
+
+    <!-- Topic 3: clearTimeout & clearInterval -->
+    <div class="section">
+        <h2>Topic 3: Stopping Timers</h2>
+        <p><strong>Learn:</strong> clearTimeout and clearInterval stop timers</p>
+
+        <h3>Cancel Before Execution</h3>
+        <button id="start-delayed">Start 3 Second Timer</button>
+        <button id="cancel-delayed">Cancel Timer</button>
+        <div class="output" id="cancel-output">Start timer, then cancel before it finishes...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

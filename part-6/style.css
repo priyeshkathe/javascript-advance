@@ -1,0 +1,170 @@
+/* Part 6: Form Validation - Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+h2 {
+    color: #f5576c;
+    border-bottom: 3px solid #f5576c;
+    padding-bottom: 10px;
+}
+
+.section {
+    background: white;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+button {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #f5576c;
+    outline: none;
+}
+
+.form-group input.valid {
+    border-color: #28a745;
+}
+
+.form-group input.invalid {
+    border-color: #dc3545;
+}
+
+.error-msg {
+    color: #dc3545;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+}
+
+.error-msg.show {
+    display: block;
+}
+
+.output {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #f5576c;
+    font-family: 'Consolas', monospace;
+}
+
+.output.success {
+    background: #d4edda;
+    border-left-color: #28a745;
+    color: #155724;
+}
+
+.output.error {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+    color: #721c24;
+}
+
+/* Password Strength */
+.strength-bar {
+    height: 5px;
+    border-radius: 3px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.strength-bar.weak { background: #dc3545; width: 33%; }
+.strength-bar.medium { background: #ffc107; width: 66%; }
+.strength-bar.strong { background: #28a745; width: 100%; }
+
+.rules-list {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.rule {
+    padding: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.rule::before {
+    content: '✗ ';
+    color: #dc3545;
+}
+
+.rule.valid {
+    color: #28a745;
+}
+
+.rule.valid::before {
+    content: '✓ ';
+}
+
+/* Card Preview */
+.card-preview {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.card-display {
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    font-family: 'Consolas', monospace;
+}

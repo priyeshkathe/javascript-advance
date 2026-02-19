@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 2: Promises & Async/Await</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Part 2: Promises & Async/Await</h1>
+
+    <!-- Topic 1: What is a Promise -->
+    <div class="section">
+        <h2>Topic 1: What is a Promise?</h2>
+        <p><strong>Learn:</strong> A Promise represents a value that will be available in the future</p>
+
+        <button id="promise-success">Simulate Success (2s)</button>
+        <button id="promise-fail">Simulate Failure (2s)</button>
+        <div class="output" id="promise-output">Click a button to see promise in action...</div>
+    </div>
+
+    <!-- Topic 2: Promise Chaining -->
+    <div class="section">
+        <h2>Topic 2: Promise Chaining (.then)</h2>
+        <p><strong>Learn:</strong> Chain multiple async operations in sequence</p>
+
+        <button id="promise-chain">Run 3 Steps in Sequence</button>
+        <div class="output" id="chain-output">Click to see sequential operations...</div>
+    </div>
+
+    <!-- Topic 3: async/await -->
+    <div class="section">
+        <h2>Topic 3: async/await - Modern Syntax</h2>
+        <p><strong>Learn:</strong> async/await makes Promise code look synchronous</p>
+
+        <button id="async-btn">Run with async/await</button>
+        <div class="output" id="async-output">Click to see async/await in action...</div>
+    </div>
+
+    <!-- Topic 4: Promise.all -->
+    <div class="section">
+        <h2>Topic 4: Promise.all - Run in Parallel</h2>
+        <p><strong>Learn:</strong> Run multiple promises at the same time</p>
+
+        <button id="parallel-btn">Run 3 Tasks in Parallel</button>
+        <div class="output" id="parallel-output">Click to run tasks simultaneously...</div>
+    </div>
+
+    <!-- Topic 5: Promise.race -->
+    <div class="section">
+        <h2>Topic 5: Promise.race - First Wins</h2>
+        <p><strong>Learn:</strong> Get result from the first promise to finish</p>
+
+        <button id="race-btn">Race 3 Tasks</button>
+        <div class="output" id="race-output">Click to see which finishes first...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

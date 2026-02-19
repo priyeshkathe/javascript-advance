@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 3: Fetch API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Part 3: Fetch API - Getting Data from Servers</h1>
+
+    <!-- Topic 1: Basic Fetch -->
+    <div class="section">
+        <h2>Topic 1: Basic Fetch - GET Request</h2>
+        <p><strong>Learn:</strong> fetch() makes HTTP requests and returns a Promise</p>
+
+        <button id="fetch-users-btn">Fetch Users</button>
+        <div class="output" id="users-output">Click to fetch users from API...</div>
+        <div class="cards-container" id="users-container"></div>
+    </div>
+
+    <!-- Topic 2: Fetch Single Item -->
+    <div class="section">
+        <h2>Topic 2: Fetch Single Item by ID</h2>
+        <p><strong>Learn:</strong> Fetch specific data using URL parameters</p>
+
+        <input type="number" id="user-id" placeholder="User ID (1-10)" min="1" max="10" value="1">
+        <button id="fetch-single-btn">Fetch User</button>
+        <div class="output" id="single-output">Enter ID and fetch user...</div>
+    </div>
+
+    <!-- Topic 3: Fetch Posts -->
+    <div class="section">
+        <h2>Topic 3: Fetch with Query Parameters</h2>
+        <p><strong>Learn:</strong> Use ?_limit=5 to limit results</p>
+
+        <button id="fetch-posts-btn">Fetch 5 Posts</button>
+        <div class="output" id="posts-output">Click to fetch posts...</div>
+        <div id="posts-container"></div>
+    </div>
+
+    <!-- Topic 4: Error Handling -->
+    <div class="section">
+        <h2>Topic 4: Error Handling with Fetch</h2>
+        <p><strong>Learn:</strong> Handle network errors and bad responses</p>
+
+        <button id="fetch-good-btn">Fetch Valid URL</button>
+        <button id="fetch-bad-btn">Fetch Invalid URL</button>
+        <div class="output" id="error-output">Test error handling...</div>
+    </div>
+
+    <!-- Topic 5: AbortController -->
+    <div class="section">
+        <h2>Topic 5: Cancel Fetch with AbortController</h2>
+        <p><strong>Learn:</strong> Cancel ongoing requests when needed</p>
+
+        <button id="start-fetch-btn">Start Slow Fetch</button>
+        <button id="cancel-fetch-btn">Cancel Fetch</button>
+        <div class="output" id="abort-output">Start fetch, then cancel it...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

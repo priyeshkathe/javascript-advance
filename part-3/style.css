@@ -1,0 +1,131 @@
+/* Part 3: Fetch API - Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+h2 {
+    color: #1e3c72;
+    border-bottom: 3px solid #1e3c72;
+    padding-bottom: 10px;
+}
+
+.section {
+    background: white;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+button {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(30, 60, 114, 0.4);
+}
+
+input[type="number"] {
+    padding: 10px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 5px;
+    width: 150px;
+}
+
+input:focus {
+    border-color: #1e3c72;
+    outline: none;
+}
+
+.output {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #1e3c72;
+    font-family: 'Consolas', monospace;
+    min-height: 50px;
+    white-space: pre-wrap;
+}
+
+.loading {
+    color: #2a5298;
+    font-style: italic;
+}
+
+.success {
+    background: #d4edda;
+    border-left-color: #28a745;
+    color: #155724;
+}
+
+.error {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+    color: #721c24;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.user-card {
+    background: linear-gradient(135deg, #f5f7fa, #e4e8ec);
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 200px;
+}
+
+.user-card h4 {
+    margin: 0 0 5px 0;
+    color: #1e3c72;
+}
+
+.user-card p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.post-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border-left: 3px solid #1e3c72;
+}
+
+.post-card h4 {
+    margin: 0 0 10px 0;
+    color: #1e3c72;
+}
