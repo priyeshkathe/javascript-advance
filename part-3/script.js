@@ -233,46 +233,65 @@ cancelFetchBtn.addEventListener('click', () => {
 
 console.log('Part 3 loaded! Study the code above, then try the exercises below.');
 
-
-// ============================================
-// ============================================
-// SELF-PRACTICE EXERCISES
-// ============================================
-// ============================================
-
-/*
-EXERCISE 1: Fetch Comments
---------------------------
-Fetch comments for post ID 1.
-API: https://jsonplaceholder.typicode.com/posts/1/comments
-
+// EXERCISE 1 
 async function fetchComments() {
-    // Your code here
-    // Log how many comments were fetched
+    try {
+        const response = await fetch(`${API}/posts/1/comments`);
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch comments");
+        }
+
+        const comments = await response.json();
+
+        console.log("Total comments:", comments.length);
+
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
 }
-*/
+fetchComments();
 
+//Exercisee 2 
+async function fetchUser999() {
+    try {
+        const response = await fetch(`${API}/users/999`);
 
-/*
-EXERCISE 2: Fetch with Error Check
-----------------------------------
-Fetch from this URL and handle the 404 error:
-https://jsonplaceholder.typicode.com/users/999
+        if (!response.ok) {
+            throw new Error(`User not found (Status: ${response.status})`);
+        }
 
-Hint: Check response.ok before calling response.json()
-*/
+        const user = await response.json();
+        console.log("User:", user);
 
+    } catch (error) {
+        console.error("Handled Error:", error.message);
+    }
+}
+fetchUser999();
 
-/*
-EXERCISE 3: Fetch Multiple Resources
-------------------------------------
-Use Promise.all to fetch both users AND posts at the same time.
-Log the count of each.
-
+//exercise 3
 async function fetchBoth() {
-    const [usersRes, postsRes] = await Promise.all([
-        // Your code here
-    ]);
-    // Your code here
+    try {
+        const [usersRes, postsRes] = await Promise.all([
+            fetch(`${API}/users`),
+            fetch(`${API}/posts`)
+        ]);
+        if (!usersRes.ok || !postsRes.ok) {
+            throw new Error("Failed to fetch one of the resources");
+        }
+
+        const users = await usersRes.json();
+        const posts = await postsRes.json();
+
+        console.log("Total Users:", users.length);
+        console.log("Total Posts:", posts.length);
+
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
 }
-*/
+fetchBoth();
+
+
+

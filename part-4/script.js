@@ -6,7 +6,7 @@
  * - localStorage.getItem(key) - Get data
  * - localStorage.removeItem(key) - Delete one item
  * - localStorage.clear() - Delete all items
- * - JSON.stringify() and JSON.parse() for objects
+ * - JSON.stringify() and and JSON.parse() for objects
  */
 
 console.log('=== Part 4: localStorage ===');
@@ -15,7 +15,7 @@ console.log('=== Part 4: localStorage ===');
 // ============================================
 // TOPIC 1: Basic localStorage Operations
 // ============================================
-// localStorage stores key-value pairs as STRINGS
+// localStorage stores key value key-value pairs as STRINGS
 
 const keyInput = document.querySelector('#key-input');
 const valueInput = document.querySelector('#value-input');
