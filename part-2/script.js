@@ -73,7 +73,7 @@ promiseFailBtn.addEventListener('click', () => {
 // ============================================
 // TOPIC 2: Promise Chaining
 // ============================================
-// Each .then() returns a new Promise
+// Each .then() returns a new Promise  DONE
 // You can chain multiple .then() calls
 
 const promiseChainBtn = document.querySelector('#promise-chain');
@@ -139,7 +139,7 @@ asyncBtn.addEventListener('click', runStepsAsync);
 // TOPIC 4: Promise.all - Run in Parallel
 // ============================================
 // Promise.all([p1, p2, p3]) - Runs all promises at same time
-// Resolves when ALL complete, or rejects if ANY fails
+// Resolves when ALL complete, or rejectsif ANY fails
 
 const parallelBtn = document.querySelector('#parallel-btn');
 const parallelOutput = document.querySelector('#parallel-output');
